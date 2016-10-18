@@ -1,0 +1,42 @@
+<ion-navbar dark *navbar>
+
+  <ion-title>
+    Profile
+  </ion-title>
+
+</ion-navbar>
+
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label>Gender</ion-label>
+      <ion-select [(ngModel)]="gender">
+        <ion-option value="m">Male</ion-option>
+        <ion-option value="f">Female</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Location</ion-label>
+      <ion-select [(ngModel)]="location">
+        <ion-option>Boulder, CO</ion-option>
+        <ion-option>Austin, TX</ion-option>
+        <ion-option>Springtown, TX</ion-option>
+        <ion-option>San Francisco, CA</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Skill Level</ion-label>
+      <ion-select [(ngModel)]="skillLevel" [alertOptions]="skillLevel">
+        <ion-label>(select)="skillSelect()">Select Skill</ion-label>
+        <ion-option>Casual</ion-option>
+        <ion-option>Seriously Casual</ion-option>
+        <ion-option>Pro</ion-option>
+      </ion-select>
+    </ion-item>
+
+
+  </ion-list>
+</ion-content>
